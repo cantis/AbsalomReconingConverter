@@ -12,7 +12,7 @@ def convert(targetDate: datetime) -> arDate:
     dayOfWeek = targetDate.weekday()+1
 
     result = arDate()
-    result.year = year + 2700
+    result.year = year + 2700 # yes, after 2099 this will break...
     result.monthNum = month
     result.day = day
     result.month = arMonths[month]

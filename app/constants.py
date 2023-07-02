@@ -8,7 +8,6 @@ arDays = {
     7: 'Sunday',
 }
 
-
 arMonths = {
     1: 'Abadius',
     2: 'Calistril',
@@ -23,7 +22,6 @@ arMonths = {
     11: 'Neth',
     12: 'Kuthona',
 }
-
 
 arShortMonths = {
     1: 'Ab',

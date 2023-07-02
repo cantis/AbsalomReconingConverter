@@ -11,13 +11,13 @@ def test_convert_base_ok():
     arDate = convert(targetDate)
 
     # assert
-    assert arDate.month == "Erastus"
+    assert arDate.month == 'Erastus'
     assert arDate.day == 10
     assert arDate.year == 4723
-    assert arDate.weekday == "Moonday"
+    assert arDate.weekday == 'Moonday'
     assert arDate.weekdayNum == 1
     assert arDate.monthNum == 7
-    assert arDate.monthShort == "Era"
+    assert arDate.monthShort == 'Era'
 
 
 def test_short_arDate_ok():
@@ -29,7 +29,7 @@ def test_short_arDate_ok():
     result = arDate.shortDate()
 
     # assert
-    assert result == "Era 10, 4723"
+    assert result == 'Era 10, 4723'
 
 
 def test_long_arDate_ok():
@@ -41,7 +41,7 @@ def test_long_arDate_ok():
     result = arDate.longDate()
 
     # assert
-    assert result == "Erastus 10, 4723"
+    assert result == 'Erastus 10, 4723'
 
 
 def test_weekday_arDate_ok():
@@ -53,7 +53,7 @@ def test_weekday_arDate_ok():
     result = arDate.weekdayDate()
 
     # assert
-    assert result == "Moonday Erastus 10, 4723"
+    assert result == 'Moonday Erastus 10, 4723'
 
 
 def test_normal_year_ok():
@@ -64,9 +64,8 @@ def test_normal_year_ok():
     arDate = convert(targetDate)
 
     # assert
-    assert arDate.year == 4723
-    assert arDate.monthNum == 2
     assert arDate.day == 28
+    assert arDate.weekday == 'Toilday'
 
 
 def test_leap_year_ok():
@@ -77,6 +76,5 @@ def test_leap_year_ok():
     arDate = convert(targetDate)
 
     # assert
-    assert arDate.year == 4724
-    assert arDate.monthNum == 2
     assert arDate.day == 29
+    assert arDate.weekday == 'Oathday'
