@@ -1,5 +1,6 @@
 class arDate:
     '''Absalom Reckoning Date'''
+
     month: str
     day: int
     year: int

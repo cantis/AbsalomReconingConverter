@@ -1,7 +1,9 @@
 from enum import Enum
 
+
 class arDays(Enum):
     '''Absalom Reckoning Days'''
+
     Moonday = 1
     Toilday = 2
     Wealday = 3
@@ -10,8 +12,10 @@ class arDays(Enum):
     Starday = 6
     Sunday = 7
 
+
 class arMonths(Enum):
     '''Absalom Reckoning Months'''
+
     Abadius = 1
     Calistril = 2
     Pharast = 3
@@ -25,8 +29,10 @@ class arMonths(Enum):
     Neth = 11
     Kuthona = 12
 
+
 class arShortMonths(Enum):
     '''Absalom Recoking Short Months'''
+
     Ab = 1
     Cal = 2
     Phar = 3
@@ -39,4 +45,3 @@ class arShortMonths(Enum):
     Lam = 10
     Net = 11
     Kut = 12
-

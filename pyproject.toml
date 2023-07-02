@@ -8,6 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pytest = "^7.4.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -44,3 +45,12 @@ line-lenth = 120
 
 [tool.ruff.flake8-quotes]
 docstring-quotes = "single"
+
+[tool.pytest.ini_options]
+# -ra is for showing the output of the tests that failed
+# -q is for quiet mode
+addopts = "-ra -q"
+# this adds the application to the path for the tests
+pythonpath = [".", "app"]
+# this sets the testpaths to the tests directory
+testpaths = ["tests"]
