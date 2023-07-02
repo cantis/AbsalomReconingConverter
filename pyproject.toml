@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "arconverter"
+version = "0.1.0"
+description = "Convert from current or given Gregorian date to Absalom Reconing from Paizo's Pathfinder RPG"
+authors = ["Evan Young <cantis@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+skip-string-normalization = true
+max-line-length = 120
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+line-lenth = 120
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = "single"
