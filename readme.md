@@ -1,4 +1,4 @@
-# arConverter.py
+# Absalom Reckoning Converter
 
 July 2023
 
