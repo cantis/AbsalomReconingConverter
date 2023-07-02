@@ -1,47 +1,41 @@
-from enum import Enum
+arDays = {
+    1: 'Moonday',
+    2: 'Toilday',
+    3: 'Wealday',
+    4: 'Oathday',
+    5: 'Fireday',
+    6: 'Starday',
+    7: 'Sunday',
+}
 
 
-class arDays(Enum):
-    '''Absalom Reckoning Days'''
-
-    Moonday = 1
-    Toilday = 2
-    Wealday = 3
-    Oathday = 4
-    Fireday = 5
-    Starday = 6
-    Sunday = 7
-
-
-class arMonths(Enum):
-    '''Absalom Reckoning Months'''
-
-    Abadius = 1
-    Calistril = 2
-    Pharast = 3
-    Gozran = 4
-    Desnus = 5
-    Sarenith = 6
-    Erastus = 7
-    Arodus = 8
-    Rova = 9
-    Lamashan = 10
-    Neth = 11
-    Kuthona = 12
+arMonths = {
+    1: 'Abadius',
+    2: 'Calistril',
+    3: 'Pharast',
+    4: 'Gozran',
+    5: 'Desnus',
+    6: 'Sarenith',
+    7: 'Erastus',
+    8: 'Arodus',
+    9: 'Rova',
+    10: 'Lamashan',
+    11: 'Neth',
+    12: 'Kuthona',
+}
 
 
-class arShortMonths(Enum):
-    '''Absalom Recoking Short Months'''
-
-    Ab = 1
-    Cal = 2
-    Phar = 3
-    Goz = 4
-    Des = 5
-    Sar = 6
-    Era = 7
-    Aro = 8
-    Rov = 9
-    Lam = 10
-    Net = 11
-    Kut = 12
+arShortMonths = {
+    1: 'Ab',
+    2: 'Cal',
+    3: 'Phar',
+    4: 'Goz',
+    5: 'Des',
+    6: 'Sar',
+    7: 'Era',
+    8: 'Aro',
+    9: 'Rov',
+    10: 'Lam',
+    11: 'Net',
+    12: 'Kut',
+}

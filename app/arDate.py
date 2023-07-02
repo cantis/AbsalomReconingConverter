@@ -8,7 +8,6 @@ class arDate:
     weekdayNum: int
     monthNum: int
     monthShort: str
-    monthLong: str
 
     def shortDate(self) -> str:
         '''Returns a short date string'''
@@ -16,11 +15,11 @@ class arDate:
 
     def longDate(self) -> str:
         '''Returns a long date string'''
-        return f"{self.monthLong} {self.day}, {self.year}"
+        return f"{self.month} {self.day}, {self.year}"
 
     def weekdayDate(self) -> str:
         '''Returns a weekday date string'''
-        return f"{self.weekday} {self.monthLong} {self.day}, {self.year}"
+        return f"{self.weekday} {self.month} {self.day}, {self.year}"
 
     def __str__(self) -> str:
         '''Returns a short date string'''

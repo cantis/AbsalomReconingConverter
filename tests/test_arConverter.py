@@ -1,9 +1,9 @@
 import datetime
-import pytest
 
-from arConverter import convert
+from app.arConverter import convert
 
-def test_convert_ok():
+
+def test_convert_base_ok():
     # arrange
     targetDate = datetime.datetime(2023, 7, 10)
 
@@ -18,5 +18,65 @@ def test_convert_ok():
     assert arDate.weekdayNum == 1
     assert arDate.monthNum == 7
     assert arDate.monthShort == "Era"
-    assert arDate.monthLong == "Erastus"
-    
+
+
+def test_short_arDate_ok():
+    # arrange
+    targetDate = datetime.datetime(2023, 7, 10)
+
+    # act
+    arDate = convert(targetDate)
+    result = arDate.shortDate()
+
+    # assert
+    assert result == "Era 10, 4723"
+
+
+def test_long_arDate_ok():
+    # arrange
+    targetDate = datetime.datetime(2023, 7, 10)
+
+    # act
+    arDate = convert(targetDate)
+    result = arDate.longDate()
+
+    # assert
+    assert result == "Erastus 10, 4723"
+
+
+def test_weekday_arDate_ok():
+    # arrange
+    targetDate = datetime.datetime(2023, 7, 10)
+
+    # act
+    arDate = convert(targetDate)
+    result = arDate.weekdayDate()
+
+    # assert
+    assert result == "Moonday Erastus 10, 4723"
+
+
+def test_normal_year_ok():
+    # arrange
+    targetDate = datetime.datetime(2023, 2, 28)
+
+    # act
+    arDate = convert(targetDate)
+
+    # assert
+    assert arDate.year == 4723
+    assert arDate.monthNum == 2
+    assert arDate.day == 28
+
+
+def test_leap_year_ok():
+    # arrange
+    targetDate = datetime.datetime(2024, 2, 29)
+
+    # act
+    arDate = convert(targetDate)
+
+    # assert
+    assert arDate.year == 4724
+    assert arDate.monthNum == 2
+    assert arDate.day == 29
