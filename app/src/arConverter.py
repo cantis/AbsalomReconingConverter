@@ -1,6 +1,6 @@
 from datetime import date, datetime
-from arDate import arDate
-from constants import arDays, arMonths, arShortMonths
+from app.src.arDate import arDate
+from app.src.constants import arDays, arMonths, arShortMonths
 
 
 def convert(targetDate: datetime) -> arDate:
@@ -22,7 +22,4 @@ def convert(targetDate: datetime) -> arDate:
 
     return result
 
-if __name__ == "__main__":
-    targetDate = date.today()
-    arDate = convert(targetDate)
-    print(arDate.weekdayDate())
+

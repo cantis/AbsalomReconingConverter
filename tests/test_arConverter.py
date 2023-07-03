@@ -1,6 +1,6 @@
 import datetime
 
-from app.arConverter import convert
+from app.src.arConverter import convert
 
 
 def test_convert_base_ok():
