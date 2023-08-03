@@ -1,18 +1,37 @@
 [tool.poetry]
 name = "arconverter"
-version = "0.1.0"
-description = "Convert from current or given Gregorian date to Absalom Reconing from Paizo's Pathfinder RPG"
+version = "0.1.2"
+description = "Convert from the current or given Gregorian date to Absalom Reconing from Paizo's Pathfinder RPG"
 authors = ["Evan Young <cantis@gmail.com>"]
-license = "MIT"
+maintainers = ["Evan Young <cantis@gmail.com>"]
+license = "LICENCE.md"
 readme = "README.md"
+repository = "https://github.com/cantis/AbsalomReconingConverter"
+keywords = ["python", "Pathfinder", "Absalom", "Golarion", "RPG", "Date"]
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment :: Role-Playing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 pytest = "^7.4.0"
 
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.280"
+pytest = "*"
+black = "^23.7.0"
+
+[tool.poetry.scripts]
+run = "run:main"
+
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["poetry>=1.2.2"]
+build-backend = "poetry.masonry.api"
 
 [tool.black]
 skip-string-normalization = true
@@ -51,6 +70,6 @@ docstring-quotes = "single"
 # -q is for quiet mode
 addopts = "-ra -q"
 # this adds the application to the path for the tests
-pythonpath = [".", "app", "app/src"]
+pythonpath = [".", "arconverter"]
 # this sets the testpaths to the tests directory
 testpaths = ["tests"]

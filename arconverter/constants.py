@@ -7,6 +7,15 @@ arDays = {
     6: 'Starday',
     7: 'Sunday',
 }
+arDayShort = {
+    1: 'Moon',
+    2: 'Toil',
+    3: 'Weal',
+    4: 'Oath',
+    5: 'Fire',
+    6: 'Star',
+    7: 'Sun',
+}
 
 arMonths = {
     1: 'Abadius',

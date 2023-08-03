@@ -5,6 +5,7 @@ class arDate:
     day: int
     year: int
     weekday: str
+    weekdayShort: str
     weekdayNum: int
     monthNum: int
     monthShort: str
