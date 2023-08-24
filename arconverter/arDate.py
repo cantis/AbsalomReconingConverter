@@ -1,10 +1,11 @@
 class arDate:
-    '''Absalom Reckoning Date'''
+    '''Represents an Absalom Reckoning Date'''
 
     month: str
     day: int
     year: int
     weekday: str
+    weekdayShort: str
     weekdayNum: int
     monthNum: int
     monthShort: str
