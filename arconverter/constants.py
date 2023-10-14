@@ -1,3 +1,5 @@
+'''Date Constants for Absalom Reckoning'''
+
 arDays = {
     1: 'Moonday',
     2: 'Toilday',
@@ -7,6 +9,7 @@ arDays = {
     6: 'Starday',
     7: 'Sunday',
 }
+
 arDayShort = {
     1: 'Moon',
     2: 'Toil',

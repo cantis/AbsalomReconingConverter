@@ -1,4 +1,6 @@
-class arDate:
+'''Absalom Reckoning Date Class'''
+
+class ArDate:
     '''Represents an Absalom Reckoning Date'''
 
     month: str
@@ -10,18 +12,18 @@ class arDate:
     monthNum: int
     monthShort: str
 
-    def shortDate(self) -> str:
+    def short_date(self) -> str:
         '''Returns a short date string'''
         return f"{self.monthShort} {self.day}, {self.year}"
 
-    def longDate(self) -> str:
+    def long_date(self) -> str:
         '''Returns a long date string'''
         return f"{self.month} {self.day}, {self.year}"
 
-    def weekdayDate(self) -> str:
+    def weekday_date(self) -> str:
         '''Returns a weekday date string'''
         return f"{self.weekday} {self.month} {self.day}, {self.year}"
 
     def __str__(self) -> str:
         '''Returns a short date string'''
-        return self.shortDate()
+        return self.short_date()

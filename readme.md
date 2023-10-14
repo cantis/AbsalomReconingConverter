@@ -1,10 +1,10 @@
 # Absalom Reckoning Converter
 
 ## Copyright Note
-Note: Absalom Reckoning is a calendar used in the Pathfinder Roleplaying Game. Pathfinder is a registered trademark of Paizo Inc., and the Pathfinder Roleplaying Game and the Pathfinder Roleplaying Game Compatibility Logo are trademarks of Paizo Inc., and are used under the Pathfinder Roleplaying Game Compatibility License. See http://paizo.com/pathfinderRPG/compatibility for more information on the compatibility license. No infringment is intended.
+Note: `Absalom Reckoning` is a calendar used in the Pathfinder Roleplaying Game. Pathfinder is a registered trademark of Paizo Inc., and the Pathfinder Roleplaying Game and the Pathfinder Roleplaying Game Compatibility Logo are trademarks of Paizo Inc., and are used under the Pathfinder Roleplaying Game Compatibility License. See http://paizo.com/pathfinderRPG/compatibility for more information on the compatibility license. No infringment is intended.
 
 ## Project Description
-A quick little project that I may make into a package. It converts standard dates into the Absalom Reconing calendar used in the Pathfinder Roleplaying Game.
+A quick little project that I am making into my first deployed package on pypi. It converts standard dates into the Absalom Reconing calendar used in the Pathfinder Roleplaying Game.
 
 There is a convert method that does the date conversion and returns an arDate object.
 
