@@ -49,3 +49,33 @@ arShortMonths = {
     11: 'Net',
     12: 'Kut',
 }
+
+arCommonMonths = {
+    1: 'Prima',
+    2: 'Snappe',
+    3: 'Anu',
+    4: 'Rusanne',
+    5: 'Farlong',
+    6: 'Sola',
+    7: 'Fletch',
+    8: 'Hazen',
+    9: 'Nuvar',
+    10: 'Shaldo',
+    11: 'Joya',
+    12: 'Kai',
+}
+
+arMonthSeasons = {
+    1: 'Winter',
+    2: 'Winter',
+    3: 'Spring',
+    4: 'Spring',
+    5: 'Spring',
+    6: 'Summer',
+    7: 'Summer',
+    8: 'Summer',
+    9: 'Fall',
+    10: 'Fall',
+    11: 'Fall',
+    12: 'Winter',
+}

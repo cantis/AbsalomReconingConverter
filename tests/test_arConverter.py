@@ -121,3 +121,48 @@ def test_invalid_input_type() -> None:
     # Act/Assert
     with pytest.raises(ArConverterError, match='Input must be a datetime object'):
         convert(test_date)
+
+
+def test_common_month_long_date_ok() -> None:
+    """Test the common month long date conversion"""
+    # arrange
+    target_date = datetime(2023, 7, 10)
+
+    # act
+    ar_date = convert(target_date)
+    result = ar_date.common_long_month()
+
+    # assert
+    assert result == 'Fletch 10, 4723'
+
+
+def test_month_season_ok() -> None:
+    """Test the month season conversion"""
+    # arrange
+    target_date = datetime(2023, 7, 10)
+
+    # act
+    ar_date = convert(target_date)
+    result = ar_date.month_season()
+
+    # assert
+    assert result == 'Summer'
+
+
+def test_season_changes_ok() -> None:
+    """Test season changes throughout the year"""
+    # arrange
+    test_dates = [
+        (datetime(2023, 1, 1), 'Winter'),
+        (datetime(2023, 3, 1), 'Spring'),
+        (datetime(2023, 6, 1), 'Summer'),
+        (datetime(2023, 9, 1), 'Fall'),
+        (datetime(2023, 12, 1), 'Winter'),
+    ]
+
+    for date, expected_season in test_dates:
+        # act
+        ar_date = convert(date)
+
+        # assert
+        assert ar_date.season == expected_season

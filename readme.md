@@ -33,6 +33,3 @@ from absalom_reckoning import AbsalomReckoning as ar
 
 print(ar.convert("2024-01-01"))
 ```
-
-## Future
-Adding a seasonal indicator to the date. This will be a string that will be one of the following: "Spring", "Summer", "Fall", "Winter".

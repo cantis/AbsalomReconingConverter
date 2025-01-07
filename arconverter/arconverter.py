@@ -11,12 +11,19 @@ from datetime import datetime
 from typing import Final
 
 from arconverter.ardate import ArDate
-from arconverter.constants import arDays, arDayShort, arMonths, arShortMonths
+from arconverter.constants import (
+    arCommonMonths,
+    arDays,
+    arDayShort,
+    arMonths,
+    arMonthSeasons,
+    arShortMonths,
+)
 
 MIN_YEAR: Final[int] = 1970  # Unix epoch
 MAX_YEAR: Final[int] = 2099  # Upper limit before conversion breaks
 
-YEAR_OFFSET: Final[int] = 2700 # Set by the Absolom Reckoning calendar (Paizo)
+YEAR_OFFSET: Final[int] = 2700  # Set by the Absolom Reckoning calendar (Paizo)
 
 
 class ArConverterError(Exception):
@@ -55,6 +62,8 @@ def convert(target_date: datetime) -> ArDate:
         result.weekday = arDays[day_of_week]
         result.weekdayNum = day_of_week
         result.weekdayShort = arDayShort[day_of_week]
+        result.commonMonth = arCommonMonths[month]
+        result.season = arMonthSeasons[month]
 
         return result
 
