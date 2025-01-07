@@ -24,52 +24,15 @@ pytest = "^7.4.0"
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.0.280"
 pytest = "*"
-black = "^23.7.0"
 
-[tool.poetry.scripts]
+[tool.poetryd.scripts]
 run = "run:main"
 
 [build-system]
 requires = ["poetry>=1.2.2"]
 build-backend = "poetry.masonry.api"
 
-[tool.black]
-skip-string-normalization = true
-max-line-length = 120
-
-[tool.ruff]
-exclude = [
-    ".bzr",
-    ".direnv",
-    ".eggs",
-    ".git",
-    ".hg",
-    ".mypy_cache",
-    ".nox",
-    ".pants.d",
-    ".pytype",
-    ".ruff_cache",
-    ".svn",
-    ".tox",
-    ".venv",
-    "__pypackages__",
-    "_build",
-    "buck-out",
-    "build",
-    "dist",
-    "node_modules",
-    "venv",
-]
-line-lenth = 120
-
-[tool.ruff.flake8-quotes]
-docstring-quotes = "single"
-
 [tool.pytest.ini_options]
-# -ra is for showing the output of the tests that failed
-# -q is for quiet mode
 addopts = "-ra -q"
-# this adds the application to the path for the tests
 pythonpath = [".", "arconverter"]
-# this sets the testpaths to the tests directory
 testpaths = ["tests"]

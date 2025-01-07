@@ -1,6 +1,6 @@
 from datetime import date
 
-from arConverter.src.arConverter import convert
+from arconverter import convert
 
 def main():
     targetDate = date.today()

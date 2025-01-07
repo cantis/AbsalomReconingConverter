@@ -1,10 +1,11 @@
 # Absalom Reckoning Converter
+Evan Young 2024
 
 ## Copyright Note
 Note: `Absalom Reckoning` is a calendar used in the Pathfinder Roleplaying Game. Pathfinder is a registered trademark of Paizo Inc., and the Pathfinder Roleplaying Game and the Pathfinder Roleplaying Game Compatibility Logo are trademarks of Paizo Inc., and are used under the Pathfinder Roleplaying Game Compatibility License. See http://paizo.com/pathfinderRPG/compatibility for more information on the compatibility license. No infringment is intended.
 
 ## Project Description
-A quick little project that I am making into my first deployed package on pypi. It converts standard dates into the Absalom Reconing calendar used in the Pathfinder Roleplaying Game.
+A quick little project that I am making into my first deployed package on pypi. It converts standard dates into the Absalom Reconing Calendar used in the Pathfinder Roleplaying Game.
 
 There is a convert method that does the date conversion and returns an arDate object.
 
@@ -26,12 +27,11 @@ weekdayNum - the number of the weekday (int)
 monthNum - the number of the month (int)
 monthShort - the short name of the month
 
-## Command line usage
-```powershell
-PS python
->>> import arConverter
->>> arConverter.convert("2023-07-02")
->>> Sunday Erastus 2, 4723
+## Example, how to call the convert method
+```python
+from absalom_reckoning import AbsalomReckoning as ar
+
+print(ar.convert("2024-01-01"))
 ```
 
 ## Future
