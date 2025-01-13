@@ -24,6 +24,7 @@ pytest = "^7.4.0"
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.0.280"
 pytest = "*"
+pdoc = "^15.0.1"
 
 [tool.poetryd.scripts]
 run = "run:main"
