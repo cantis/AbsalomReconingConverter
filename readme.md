@@ -1,4 +1,9 @@
 # Absalom Reckoning Converter
+![Python Version](https://img.shields.io/pypi/pyversions/arconverter)
+![PyPI version](https://img.shields.io/pypi/v/arconverter)
+![License](https://img.shields.io/pypi/l/arconverter)
+![Downloads](https://img.shields.io/pypi/dm/arconverter)
+w
 Evan Young 2025
 
 ## Copyright Note
@@ -28,6 +33,12 @@ A quick little project that I am making into my first deployed package on pypi. 
 - `common_long_month()`: Returns date with common month in format "Fletch 10, 4723"
 - `month_season()`: Returns current season as string
 
+## Installation
+```powershell
+pip install arconverter
+```
+*Or your preferred method of installing python packages.*
+
 ## Useage
 ```python
 from datetime import datetime
@@ -43,3 +54,5 @@ print(ar_date.weekday_date())     # "Moonday Erastus 10, 4723"
 print(ar_date.common_long_month())# "Fletch 10, 4723"
 print(ar_date.month_season())     # "Summer"
 ```
+
+&Omega;

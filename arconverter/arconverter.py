@@ -42,7 +42,36 @@ def validate_date(date: datetime) -> None:
 
 
 def convert(target_date: datetime) -> ArDate:
-    """Convert a given date to Absolom Reconing date."""
+    """Convert a datetime object to an Absalom Reckoning date.
+
+    Args:
+        target_date: A datetime object representing the Gregorian calendar date to convert
+
+    Returns:
+        ArDate: An Absalom Reckoning date object with the following attributes:
+            - year: AR year (Gregorian + 2700)
+            - month: Full month name
+            - monthShort: 3-letter month abbreviation
+            - commonMonth: Common folk month name
+            - day: Day of month
+            - weekday: Full weekday name
+            - weekdayShort: 3-letter weekday abbreviation
+            - weekdayNum: Day of week (1-7, Moonday=1)
+            - monthNum: Month number (1-12)
+            - season: Current season name
+
+    Raises:
+        ArConverterError: If input is not a datetime object or year is out of valid range
+
+    Examples:
+        >>> from datetime import datetime
+        >>> date = datetime(2023, 7, 10)
+        >>> ar_date = convert(date)
+        >>> print(ar_date.long_date())
+        'Erastus 10, 4723'
+        >>> print(ar_date.season)
+        'Summer'
+    """
     validate_date(target_date)
 
     try:

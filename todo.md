@@ -1,13 +1,12 @@
 # To Do
 *Based on suggestions from Github Copilot*
 ## Documentation
-- [ ] Add more detailed usage examples in readme.md
+- [x] Add more detailed usage examples in readme.md
 - [ ] Add docstrings to all public methods in arconverter
-- [ ] Include installation instructions
-- [ ] Add contribution guidelines
+- [X] Include installation instructions
 ## Package Metadata
-- [ ] Add long description in pyproject.toml
-- [ ] Add more classifiers for Python versions
+- [x] Add long description in pyproject.toml
+- [x] Add more classifiers for Python versions
 - [ ] Consider adding project URLs for documentation, issues, etc.
 ## Testing
 - [ ] Add test coverage reporting
@@ -17,7 +16,7 @@
 - [ ] Add automated PyPI deployment workflow
 - [ ] Add badge for test status
 - [ ] Add coverage badge
-- [ ] Add version badge
+- [x] Add version badge
 ## Code Quality
 - [ ] Add pre-commit hooks
 - [ ] Configure more ruff rules in .ruff.toml
@@ -26,5 +25,6 @@
 - [ ] Add __all__ in __init__.py
 - [ ] Add CLI interface
 - [ ] Consider adding support for serialization
+- [ ] Add support for festivals and holidays
 
 &Omega;
