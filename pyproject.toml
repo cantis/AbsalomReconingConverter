@@ -1,12 +1,14 @@
-[tool.poetry]
+## Project metadata migrated to PEP 621 and uv configuration
+
+[project]
 name = "arconverter"
 version = "0.1.2"
-description = "Convert from the current or given Gregorian date to Absalom Reconing from Paizo's Pathfinder RPG"
-authors = ["Evan Young <cantis@gmail.com>"]
-maintainers = ["Evan Young <cantis@gmail.com>"]
-license = "LICENCE.md"
-readme = "README.md"
-repository = "https://github.com/cantis/AbsalomReconingConverter"
+description = "Convert from the current or given Gregorian date to Absalom Reckoning from Paizo's Pathfinder RPG"
+readme = "readme.md"
+requires-python = ">=3.10"
+license = { file = "LICENCE.md" }
+authors = [{ name = "Evan Young", email = "cantis@gmail.com" }]
+maintainers = [{ name = "Evan Young", email = "cantis@gmail.com" }]
 keywords = ["python", "Pathfinder", "Absalom", "Golarion", "RPG", "Date"]
 classifiers = [
     "Environment :: Console",
@@ -21,23 +23,23 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-pytest = "^7.4.0"
-pdoc = "^15.0.1"
+# No runtime dependencies at the moment
+dependencies = []
 
+[project.urls]
+Homepage = "https://github.com/cantis/AbsalomReconingConverter"
+Repository = "https://github.com/cantis/AbsalomReconingConverter"
+Documentation = "https://cantis.github.io/AbsalomReconingConverter/"
 
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.0.280"
-pytest = "*"
-pytest-cov = "^6.0.0"
-
-[tool.poetryd.scripts]
-run = "run:main"
+[project.scripts]
+arconverter = "arconverter.__main__:main"
 
 [build-system]
-requires = ["poetry>=1.2.2"]
-build-backend = "poetry.masonry.api"
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[tool.uv.dependency-groups]
+dev = ["pytest>=7.4,<9", "pytest-cov>=6,<7", "ruff>=0.6,<1", "pdoc>=15,<16"]
 
 [tool.pytest.ini_options]
 addopts = "-ra -q"

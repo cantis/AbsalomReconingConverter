@@ -37,7 +37,10 @@ A quick little project that I am making into my first deployed package on pypi. 
 ```powershell
 pip install arconverter
 ```
-*Or your preferred method of installing python packages.*
+Or with uv:
+```powershell
+uv tool install arconverter
+```
 
 ## Useage
 ```python
@@ -56,3 +59,22 @@ print(ar_date.month_season())     # "Summer"
 ```
 
 &Omega;
+
+## Development (with uv)
+
+```powershell
+# Create and sync a dev environment
+uv sync --all-extras --dev
+
+# Run tests
+uv run pytest
+
+# Lint
+uv run ruff check .
+
+# Generate docs (pdoc)
+uv run pdoc -o docs arconverter
+
+# Run the CLI
+uv run arconverter
+```
