@@ -1,38 +1,79 @@
 # Absalom Reckoning Converter
+![Python Version](https://img.shields.io/pypi/pyversions/arconverter)
+![PyPI version](https://img.shields.io/pypi/v/arconverter)
+![License](https://img.shields.io/pypi/l/arconverter)
+![Downloads](https://img.shields.io/pypi/dm/arconverter)
+Evan Young 2025
 
 ## Copyright Note
-Note: `Absalom Reckoning` is a calendar used in the Pathfinder Roleplaying Game. Pathfinder is a registered trademark of Paizo Inc., and the Pathfinder Roleplaying Game and the Pathfinder Roleplaying Game Compatibility Logo are trademarks of Paizo Inc., and are used under the Pathfinder Roleplaying Game Compatibility License. See http://paizo.com/pathfinderRPG/compatibility for more information on the compatibility license. No infringment is intended.
+This library uses trademarks and/or copyrights owned by Paizo Inc., used under Paizo's Fan Content Policy (paizo.com/licenses/fancontent). This library is not published, endorsed, or specifically approved by Paizo. For more information about Paizo Inc. and Paizo products, visit paizo.com.
 
 ## Project Description
-A quick little project that I am making into my first deployed package on pypi. It converts standard dates into the Absalom Reconing calendar used in the Pathfinder Roleplaying Game.
+The `Absalom Reckoning` is a calendar used in the Pathfinder Roleplaying Game.
+A quick little project that I am making into my first deployed package on pypi. It converts standard dates into the Absalom Reckoning Calendar used in the Pathfinder Roleplaying Game.
 
-There is a convert method that does the date conversion and returns an arDate object.
+## ArDate Attributes
+- `month`: Full month name in AR calendar (e.g. "Erastus")
+- `monthShort`: Abbreviated month name (e.g. "Era")
+- `commonMonth`: Common folk month name (e.g. "Fletch")
+- `day`: Day of the month (1-31)
+- `year`: Year in AR calendar
+- `weekday`: Full weekday name (e.g. "Moonday")
+- `weekdayShort`: Abbreviated weekday name (e.g. "Moon")
+- `weekdayNum`: Day of week number (1-7, starts with Moonday)
+- `monthNum`: Month number (1-12)
+- `season`: Current season (Winter, Spring, Summer, Fall)
 
-The arDate object has a __str__ method that returns the date in the format of "{short month} {day}, {year}".
+## Methods
+- `convert()`: Converts a datetime object into an ArDate object
+- `short_date()`: Returns date in format "Era 10, 4723"
+- `long_date()`: Returns date in format "Erastus 10, 4723"
+- `weekday_date()`: Returns date in format "Moonday Erastus 10, 4723"
+- `common_long_month()`: Returns date with common month in format "Fletch 10, 4723"
+- `month_season()`: Returns current season as string
 
-### arDate methods
-shortDate() - returns the date in the format of "{short month} {day}, {year}"
-longDate() - returns the date in the format of "{long month} {day}, {year}"
-weekdayDate() - returns the date in the format of "{weekday} {long month} {day}, {year}"
-
-### arDate attributes
-year - the year in the Absalom Reckoning calendar
-month - the long name of the month
-day - the day of the month (int)
-year - the year in the Absalom Reckoning calendar (+2k from standard)
-weekday - the long name of the weekday
-weekdayShort - the short name of the weekday
-weekdayNum - the number of the weekday (int)
-monthNum - the number of the month (int)
-monthShort - the short name of the month
-
-## Command line usage
+## Installation
 ```powershell
-PS python
->>> import arConverter
->>> arConverter.convert("2023-07-02")
->>> Sunday Erastus 2, 4723
+pip install arconverter
+```
+Or with uv:
+```powershell
+uv tool install arconverter
 ```
 
-## Future
-Adding a seasonal indicator to the date. This will be a string that will be one of the following: "Spring", "Summer", "Fall", "Winter".
+## Usage
+```python
+from datetime import datetime
+from arconverter import convert
+
+# Convert a date to Absalom Reckoning
+ar_date = convert(datetime(2023, 7, 10))
+
+# Print the date in various formats
+print(ar_date.long_date())        # "Erastus 10, 4723"
+print(ar_date.short_date())       # "Era 10, 4723"
+print(ar_date.weekday_date())     # "Moonday Erastus 10, 4723"
+print(ar_date.common_long_month())# "Fletch 10, 4723"
+print(ar_date.month_season())     # "Summer"
+```
+
+&Omega;
+
+## Development (with uv)
+
+```powershell
+# Create and sync a dev environment
+uv sync --all-extras --dev
+
+# Run tests
+uv run pytest
+
+# Lint
+uv run ruff check .
+
+# Generate docs (pdoc)
+uv run pdoc -o docs arconverter
+
+# Run the CLI
+uv run arconverter
+```
