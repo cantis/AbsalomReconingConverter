@@ -23,7 +23,7 @@ from arconverter.constants import (
 MIN_YEAR: Final[int] = 1970  # Unix epoch
 MAX_YEAR: Final[int] = 2099  # Upper limit before conversion breaks
 
-YEAR_OFFSET: Final[int] = 2700  # Set by the Absolom Reckoning calendar (Paizo)
+YEAR_OFFSET: Final[int] = 2700  # Set by the Absalom Reckoning calendar (Paizo)
 
 
 class ArConverterError(Exception):
