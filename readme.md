@@ -41,7 +41,7 @@ Or with uv:
 uv tool install arconverter
 ```
 
-## Useage
+## Usage
 ```python
 from datetime import datetime
 from arconverter import convert
