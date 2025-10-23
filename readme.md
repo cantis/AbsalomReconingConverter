@@ -10,7 +10,7 @@ This library uses trademarks and/or copyrights owned by Paizo Inc., used under P
 
 ## Project Description
 The `Absalom Reckoning` is a calendar used in the Pathfinder Roleplaying Game.
-A quick little project that I am making into my first deployed package on pypi. It converts standard dates into the Absalom Reconing Calendar used in the Pathfinder Roleplaying Game.
+A quick little project that I am making into my first deployed package on pypi. It converts standard dates into the Absalom Reckoning Calendar used in the Pathfinder Roleplaying Game.
 
 ## ArDate Attributes
 - `month`: Full month name in AR calendar (e.g. "Erastus")
