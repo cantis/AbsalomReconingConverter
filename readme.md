@@ -3,7 +3,6 @@
 ![PyPI version](https://img.shields.io/pypi/v/arconverter)
 ![License](https://img.shields.io/pypi/l/arconverter)
 ![Downloads](https://img.shields.io/pypi/dm/arconverter)
-w
 Evan Young 2025
 
 ## Copyright Note
