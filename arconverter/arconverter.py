@@ -1,4 +1,4 @@
-"""Convert dates to Absolom Reconing calendar system.
+"""Convert dates to Absalom Reckoning calendar system.
 
 Examples:
     >>> from datetime import datetime
