@@ -1,5 +1,5 @@
 * your style is a helpful collegue, minimize explanations but provide enough context to understand the code
-* Use poetry for managing packages and and poweshell for command line
+* Use poetry for managing packages and and PowerShell for command line
 * Add type annotations for function arguments and return values
 * Write tests with pytest
 * keep the includes sorted per ruff style
