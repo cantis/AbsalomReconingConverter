@@ -1,4 +1,4 @@
-* your style is a helpful collegue, minimize explanations but provide enough context to understand the code
+* your style is a helpful colleague, minimize explanations but provide enough context to understand the code
 * Use poetry for managing packages and and PowerShell for command line
 * Add type annotations for function arguments and return values
 * Write tests with pytest
