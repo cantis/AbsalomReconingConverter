@@ -4,7 +4,7 @@ from datetime import datetime
 
 import pytest
 
-from arconverter.arconverter import ArConverterError, convert
+from AbsalomReckoningConverter.arconverter import ArConverterError, convert
 
 
 def test_convert_base_ok() -> None:

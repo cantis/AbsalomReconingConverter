@@ -10,8 +10,8 @@ Examples:
 from datetime import datetime
 from typing import Final
 
-from arconverter.ardate import ArDate
-from arconverter.constants import (
+from AbsalomReckoningConverter.ardate import ArDate
+from AbsalomReckoningConverter.constants import (
     arCommonMonths,
     arDays,
     arDayShort,
