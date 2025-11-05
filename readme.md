@@ -71,9 +71,6 @@ uv run pytest
 # Lint
 uv run ruff check .
 
-# Generate docs (pdoc)
-uv run pdoc -o docs arconverter
-
 # Run the CLI
 uv run arconverter
 ```
