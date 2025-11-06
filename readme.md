@@ -1,8 +1,8 @@
 # Absalom Reckoning Converter
-![Python Version](https://img.shields.io/pypi/pyversions/arconverter)
-![PyPI version](https://img.shields.io/pypi/v/arconverter)
-![License](https://img.shields.io/pypi/l/arconverter)
-![Downloads](https://img.shields.io/pypi/dm/arconverter)
+![Python Version](https://img.shields.io/pypi/pyversions/AbsalomReckoningConverter)
+![PyPI version](https://img.shields.io/pypi/v/AbsalomReckoningConverter)
+![License](https://img.shields.io/pypi/l/AbsalomReckoningConverter)
+[![TestPyPI](https://img.shields.io/badge/PyPI-TestPyPI-lightgrey)](https://test.pypi.org/project/AbsalomReckoningConverter/)
 Evan Young 2025
 
 ## Copyright Note
@@ -34,17 +34,17 @@ A quick little project that I am making into my first deployed package on pypi. 
 
 ## Installation
 ```powershell
-pip install arconverter
+pip install AbsalomReckoningConverter
 ```
 Or with uv:
 ```powershell
-uv tool install arconverter
+uv pip install AbsalomReckoningConverter
 ```
 
 ## Usage
 ```python
 from datetime import datetime
-from arconverter import convert
+from AbsalomReckoningConverter import convert
 
 # Convert a date to Absalom Reckoning
 ar_date = convert(datetime(2023, 7, 10))
@@ -72,5 +72,5 @@ uv run pytest
 uv run ruff check .
 
 # Run the CLI
-uv run arconverter
+uv run python -m AbsalomReckoningConverter
 ```
