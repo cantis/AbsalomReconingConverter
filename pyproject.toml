@@ -38,4 +38,10 @@ pythonpath = [".", "src"]
 testpaths = ["tests"]
 
 [dependency-groups]
-dev = ["pdoc>=15.0.4", "pytest>=8.4.2", "pytest-cov>=7.0.0", "ruff>=0.14.2"]
+dev = [
+    "pdoc>=15.0.4",
+    "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.14.2",
+    "twine>=6.2.0",
+]

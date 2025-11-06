@@ -34,7 +34,7 @@ uv run arconverter            # Run CLI (prints today's date in AR)
 - **Docstrings**: Minimal, usually single-line. Include usage examples in module/function docstrings
 
 ### Calendar Constants Pattern
-All lookup dictionaries in `constants.py` use **1-based indexing** (months 1-12, weekdays 1-7) to match calendar conventions. Moonday is weekday #1, not Sunday.
+All lookup dictionaries in `constants.py` use **1-based indexing** (months 1-12, weekdays 1-7) to match calendar conventions. Moonday is weekday 1 not Sunday.
 
 ### Error Handling
 - Use `ArConverterError` for all domain-specific errors
