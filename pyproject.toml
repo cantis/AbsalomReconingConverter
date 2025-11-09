@@ -1,47 +1,47 @@
 ## Project metadata migrated to PEP 621 and uv configuration
 
 [project]
-name = "arconverter"
-version = "0.1.2"
+name = "AbsalomReckoningConverter"
+version = "1.0.1"
 description = "Convert from the current or given Gregorian date to Absalom Reckoning from Paizo's Pathfinder RPG"
-readme = "readme.md"
+readme = "README.md"
 requires-python = ">=3.10"
-license = { file = "LICENCE.md" }
+license = { file = "LICENSE.md" }
 authors = [{ name = "Evan Young", email = "cantis@gmail.com" }]
 maintainers = [{ name = "Evan Young", email = "cantis@gmail.com" }]
 keywords = ["python", "Pathfinder", "Absalom", "Golarion", "RPG", "Date"]
 classifiers = [
-    "Environment :: Console",
+    "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Intended Audience :: Developers",
     "Operating System :: OS Independent",
     "Topic :: Games/Entertainment :: Role-Playing",
     "Topic :: Software Development :: Libraries :: Python Modules",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
 ]
 
-# No runtime dependencies at the moment
 dependencies = []
 
 [project.urls]
 Homepage = "https://github.com/cantis/AbsalomReconingConverter"
 Repository = "https://github.com/cantis/AbsalomReconingConverter"
-Documentation = "https://cantis.github.io/AbsalomReconingConverter/"
+Issues = "https://github.com/cantis/AbsalomReconingConverter/issues"
 
-[project.scripts]
-arconverter = "arconverter.__main__:main"
 
 [build-system]
 requires = ["hatchling>=1.21"]
 build-backend = "hatchling.build"
 
-[tool.uv.dependency-groups]
-dev = ["pytest>=7.4,<9", "pytest-cov>=6,<7", "ruff>=0.6,<1", "pdoc>=15,<16"]
 
 [tool.pytest.ini_options]
 addopts = "-ra -q"
-pythonpath = [".", "arconverter"]
+pythonpath = [".", "src"]
 testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pdoc>=15.0.4",
+    "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.14.2",
+    "twine>=6.2.0",
+]

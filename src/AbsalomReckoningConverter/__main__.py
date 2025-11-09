@@ -2,7 +2,7 @@
 
 from datetime import datetime
 
-from arconverter import convert
+from AbsalomReckoningConverter import convert
 
 
 def main() -> None:

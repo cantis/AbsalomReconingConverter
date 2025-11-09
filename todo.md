@@ -9,7 +9,7 @@
 - [x] Add more classifiers for Python versions
 - [ ] Consider adding project URLs for documentation, issues, etc.
 ## Testing
-- [ ] Add test coverage reporting
+- [x] Add test coverage reporting
 - [ ] Expand test cases for edge scenarios
 - [ ] Add tox configuration for multi-version testing
 ## CI/CD
