@@ -1,4 +1,4 @@
-#:schema = "https://json.schemastore.org/ruff.json"\
+#:schema = "https://json.schemastore.org/ruff.json"
 
 line-length = 120
 # Bigger than the recomendation in pep 8 but they are focused on having multiple
