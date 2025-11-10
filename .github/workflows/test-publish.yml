@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install uv
-      - run: uv pip install hatchling twine
+      - run: uv sync --group dev
       - run: uv build
       - run: twine upload --repository testpypi dist/* --non-interactive
         env:
