@@ -24,7 +24,7 @@ jobs:
 
       - name: Install build backend
         run: |
-          uv pip install hatchling twine
+          uv pip install --system hatchling twine
 
       - name: Build package
         run: |
