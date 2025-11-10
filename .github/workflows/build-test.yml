@@ -23,17 +23,17 @@ jobs:
         run: |
           pip install uv
 
-      - name: Install dependencies
+      - name: Sync dev environment
         run: |
-          uv pip install --system pytest ruff
+          uv sync --all-extras --dev
 
       - name: Lint with Ruff
         run: |
           uv run ruff check .
 
-      - name: Run tests with Pytest
+      - name: Run tests with coverage
         run: |
-          pytest --maxfail=1 --disable-warnings -q
+          uv run pytest --cov
 
       - name: Build package
         run: |
